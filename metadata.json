@@ -1,0 +1,8 @@
+{
+  "name": "Photo Gallery",
+  "description": "A clean starter repository ready for building.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
