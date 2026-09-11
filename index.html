@@ -5,15 +5,218 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo Gallery</title>
-    <meta name="description" content="A clean starter repository ready for building." />
+    <meta name="description" content="A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions." />
     <meta property="og:title" content="Photo Gallery" />
-    <meta property="og:description" content="A clean starter repository ready for building." />
+    <meta property="og:description" content="A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        background-color: #0f1115;
+        color: #f4f4f5;
+        min-height: 100vh;
+        padding: 2.5rem 1rem;
+      }
+      .gallery-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .gallery-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      .gallery-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.025em;
+      }
+      .gallery-header p {
+        font-size: 1rem;
+        color: #a1a1aa;
+      }
+      /* 9 photo grid: 3 rows, 3 columns of equal dimensions */
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .photo-card {
+        background: #18181b;
+        border: 1px solid #27272a;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .photo-card:hover {
+        transform: translateY(-4px);
+        border-color: #3f3f46;
+        box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.6);
+      }
+      .photo-img-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background-color: #27272a;
+      }
+      .photo-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .photo-card:hover .photo-img-wrapper img {
+        transform: scale(1.05);
+      }
+      .photo-info {
+        padding: 1rem;
+        text-align: center;
+      }
+      .photo-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fafafa;
+        margin-bottom: 0.25rem;
+      }
+      .photo-subtitle {
+        font-size: 0.8rem;
+        color: #71717a;
+      }
+      @media (max-width: 768px) {
+        .photo-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .photo-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-[#0f1115] text-[#e4e4e7] antialiased selection:bg-amber-500/30 selection:text-amber-200 min-h-screen">
-    <div id="root"></div>
+  <body>
+    <div id="root">
+      <div class="gallery-container">
+        <header class="gallery-header">
+          <h1>Photo Gallery</h1>
+          <p>3×3 Photo Grid • Equal Dimensions</p>
+        </header>
+
+        <main class="photo-grid">
+          <!-- Row 1, Column 1 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&h=600&q=80" alt="Mountain Sunrise" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Mountain Sunrise</h2>
+              <p class="photo-subtitle">Placeholder Photo 1</p>
+            </div>
+          </article>
+
+          <!-- Row 1, Column 2 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&h=600&q=80" alt="Coastal Twilight" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Coastal Twilight</h2>
+              <p class="photo-subtitle">Placeholder Photo 2</p>
+            </div>
+          </article>
+
+          <!-- Row 1, Column 3 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&h=600&q=80" alt="Urban Architecture" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Urban Architecture</h2>
+              <p class="photo-subtitle">Placeholder Photo 3</p>
+            </div>
+          </article>
+
+          <!-- Row 2, Column 1 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&h=600&q=80" alt="Misty Forest" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Misty Forest</h2>
+              <p class="photo-subtitle">Placeholder Photo 4</p>
+            </div>
+          </article>
+
+          <!-- Row 2, Column 2 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&h=600&q=80" alt="Desert Dunes" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Desert Dunes</h2>
+              <p class="photo-subtitle">Placeholder Photo 5</p>
+            </div>
+          </article>
+
+          <!-- Row 2, Column 3 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&h=600&q=80" alt="City Lights" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">City Lights</h2>
+              <p class="photo-subtitle">Placeholder Photo 6</p>
+            </div>
+          </article>
+
+          <!-- Row 3, Column 1 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&h=600&q=80" alt="Modern Geometry" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Modern Geometry</h2>
+              <p class="photo-subtitle">Placeholder Photo 7</p>
+            </div>
+          </article>
+
+          <!-- Row 3, Column 2 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&h=600&q=80" alt="Emerald Lake" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Emerald Lake</h2>
+              <p class="photo-subtitle">Placeholder Photo 8</p>
+            </div>
+          </article>
+
+          <!-- Row 3, Column 3 -->
+          <article class="photo-card">
+            <div class="photo-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&h=600&q=80" alt="Warm Shadows" loading="lazy" />
+            </div>
+            <div class="photo-info">
+              <h2 class="photo-title">Warm Shadows</h2>
+              <p class="photo-subtitle">Placeholder Photo 9</p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

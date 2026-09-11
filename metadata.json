@@ -1,6 +1,6 @@
 {
   "name": "Photo Gallery",
-  "description": "A clean starter repository ready for building.",
+  "description": "A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
