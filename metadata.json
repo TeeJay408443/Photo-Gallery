@@ -1,6 +1,6 @@
 {
   "name": "Photo Gallery",
-  "description": "A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions.",
+  "description": "A 9-photo culinary gallery featuring hot foods, cold foods, and desserts arranged in a 3×3 grid of equal dimensions.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
