@@ -48,7 +48,7 @@ const FOOD_ITEMS: FoodItem[] = [
   },
   {
     id: 6,
-    title: 'Chilled Açai Bowl',
+    title: 'Açai Bowl',
     category: 'Cold Food',
     badgeClass: 'bg-sky-500/15 text-sky-400 border border-sky-500/30',
     url: 'images/acai.jpg',
@@ -70,7 +70,7 @@ const FOOD_ITEMS: FoodItem[] = [
   },
   {
     id: 9,
-    title: 'Artisan Gelato',
+    title: 'Strawberry Ice Cream',
     category: 'Dessert',
     badgeClass: 'bg-pink-500/15 text-pink-400 border border-pink-500/30',
     url: 'images/gelato.jpg',
