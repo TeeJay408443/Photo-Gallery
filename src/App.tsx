@@ -15,21 +15,21 @@ const FOOD_ITEMS: FoodItem[] = [
     title: 'Wood-Fired Pizza',
     category: 'Hot Food',
     badgeClass: 'bg-orange-500/15 text-orange-400 border border-orange-500/30',
-    url: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/pizza.jpg',
   },
   {
     id: 2,
     title: 'Tonkotsu Ramen',
     category: 'Hot Food',
     badgeClass: 'bg-orange-500/15 text-orange-400 border border-orange-500/30',
-    url: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/ramen.jpg',
   },
   {
     id: 3,
     title: 'Classic Cheeseburger',
     category: 'Hot Food',
     badgeClass: 'bg-orange-500/15 text-orange-400 border border-orange-500/30',
-    url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/burger.jpg',
   },
   // Row 2: Cold Foods
   {
@@ -37,21 +37,21 @@ const FOOD_ITEMS: FoodItem[] = [
     title: 'Fresh Sushi & Sashimi',
     category: 'Cold Food',
     badgeClass: 'bg-sky-500/15 text-sky-400 border border-sky-500/30',
-    url: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/sushi.jpg',
   },
   {
     id: 5,
     title: 'Crisp Greek Salad',
     category: 'Cold Food',
     badgeClass: 'bg-sky-500/15 text-sky-400 border border-sky-500/30',
-    url: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/salad.jpg',
   },
   {
     id: 6,
     title: 'Chilled Açai Bowl',
     category: 'Cold Food',
     badgeClass: 'bg-sky-500/15 text-sky-400 border border-sky-500/30',
-    url: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/acai.jpg',
   },
   // Row 3: Desserts
   {
@@ -59,21 +59,21 @@ const FOOD_ITEMS: FoodItem[] = [
     title: 'Decadent Chocolate Cake',
     category: 'Dessert',
     badgeClass: 'bg-pink-500/15 text-pink-400 border border-pink-500/30',
-    url: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/chocolate-cake.jpg',
   },
   {
     id: 8,
     title: 'Fresh Berry Tart',
     category: 'Dessert',
     badgeClass: 'bg-pink-500/15 text-pink-400 border border-pink-500/30',
-    url: 'https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/berry-tart.jpg',
   },
   {
     id: 9,
     title: 'Artisan Gelato',
     category: 'Dessert',
     badgeClass: 'bg-pink-500/15 text-pink-400 border border-pink-500/30',
-    url: 'https://images.unsplash.com/photo-1560008511-11c63416e52d?auto=format&fit=crop&w=600&h=600&q=80',
+    url: 'images/gelato.jpg',
   },
 ];
 
