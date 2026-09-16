@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SmileyFace } from './components/SmileyFace';
 
 interface FoodItem {
   id: number;
@@ -131,14 +132,17 @@ export const App: React.FC = () => {
     return (
       <div className="gallery-container w-full max-w-[1000px] mx-auto py-8 sm:py-10 px-4">
         <main className="detail-page">
-          <button
-            type="button"
-            onClick={closeFoodDetail}
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-zinc-700 px-4 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
-          >
-            <span aria-hidden="true">←</span>
-            Back to gallery
-          </button>
+          <div className="mb-8 flex items-center justify-between">
+            <button
+              type="button"
+              onClick={closeFoodDetail}
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-4 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
+            >
+              <span aria-hidden="true">←</span>
+              Back to gallery
+            </button>
+            <SmileyFace className="scale-75 origin-right" />
+          </div>
 
           <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl shadow-black/40">
             <div className="grid md:grid-cols-2">
@@ -169,7 +173,10 @@ export const App: React.FC = () => {
 
   return (
     <div className="gallery-container w-full max-w-[1000px] mx-auto py-10 px-4">
-      <header className="gallery-header text-center mb-10">
+      <header className="gallery-header text-center mb-10 flex flex-col items-center">
+        <div className="mb-4">
+          <SmileyFace />
+        </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">
           Food Photo Gallery
         </h1>
